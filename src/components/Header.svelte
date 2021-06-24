@@ -17,19 +17,25 @@
 
 <style>
     h1 {
-        display: inline
+        display: inline;
+        margin-left: 33px;
     }
     ul {
+        justify-self: end;
         list-style: none;
         display: flex;
         width: max-content;
     }
     li {
         cursor: pointer;
+        margin-right: 33px;
 
     }
     .container {
-        display: flex;
+        display: grid;
         align-items: center;
+        grid-auto-flow: column;
+        width: 100%;
+        border-bottom: 1px solid #979797;
     }
 </style>
