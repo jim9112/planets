@@ -4,5 +4,20 @@
     console.log(data)
 </script>
 
-<Header />
+    <Header />
+ 
 
+<style>
+    :global(*) {
+        margin: 0px;
+    }
+    :global(body) {
+        background: #070724;
+        background-image: url("../assets/background-stars.svg");
+        color: #FFFFFF;
+    }
+    .page {
+        width: 100%;
+        height: 100%;
+    }
+</style>
