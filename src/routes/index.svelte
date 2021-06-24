@@ -1,18 +1,23 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
     import Header from '../components/Header.svelte'
     import PlanetCard  from '../components/PlanetCard.svelte'
     import data from '../lib/data.json'
     let found
     let loading = true
+    
     // find chosen planet in JSON file
     const findPlanet = (planetName) => {
         found = data.find(planet => planet.name === planetName)
         loading = false
-        console.log(found)
-        
+        console.log(found)   
     }
-    // To Do: make a default planet pop up
-    // found = findPlanet('Earth')
+
+    // make a default planet pop up
+    onMount(() => {
+		findPlanet('Mercury')
+	});
+
 </script>
     <div class="app">
         <Header findPlanet={findPlanet} />

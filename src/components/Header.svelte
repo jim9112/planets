@@ -2,6 +2,8 @@
     export let findPlanet: any
     let mobileMenu
 </script>
+
+<!-- mobile menu -->
 <div bind:this={mobileMenu} class="mobile-menu hidden">
     <ul>
         <li on:click={()=> {
@@ -76,6 +78,12 @@
         height: 100vh;
         padding-top: 40px;
         background: rgba(0, 0, 0, 0.493);
+    }
+    .mobile-menu ul {
+        width: max-content;
+    }
+    .mobile-menu li {
+        cursor: pointer;
     }
     .container {
         display: grid;
