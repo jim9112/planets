@@ -1,7 +1,8 @@
 <script lang="ts">
     import Header from '../components/Header.svelte'
     import data from '../lib/data.json'
-    console.log(data)
+    let found = data.find(planet => planet.name === "Earth");
+    console.log(found)
 </script>
 
     <Header />
