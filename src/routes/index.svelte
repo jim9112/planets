@@ -14,15 +14,19 @@
     // To Do: make a default planet pop up
     // found = findPlanet('Earth')
 </script>
-
-    <Header findPlanet={findPlanet} />
-    {#if !loading}
-	    <PlanetCard planet={found} />
-    {/if}
+    <div class="app">
+        <Header findPlanet={findPlanet} />
+        {#if !loading}
+            <PlanetCard planet={found} />
+        {/if}
+    </div>
     
  
 
 <style>
+    .app {
+        position: relative;
+    }
     :global(*) {
         margin: 0px;
     }
