@@ -16,8 +16,4 @@
         background-image: url("../assets/background-stars.svg");
         color: #FFFFFF;
     }
-    .page {
-        width: 100%;
-        height: 100%;
-    }
 </style>
