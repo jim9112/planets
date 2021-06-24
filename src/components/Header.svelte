@@ -91,6 +91,7 @@
         grid-auto-flow: column;
         width: 100%;
         border-bottom: 1px solid #979797;
+        padding: 16px 0px;
     }
     .hamburger-icon {
         justify-self: end;
