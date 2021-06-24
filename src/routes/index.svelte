@@ -1,5 +1,6 @@
 <script lang="ts">
     import Header from '../components/Header.svelte'
+    import PlanetCard  from '../components/PlanetCard.svelte'
     import data from '../lib/data.json'
     let found
     let loading = true
@@ -16,8 +17,8 @@
 
     <Header findPlanet={findPlanet} />
     {#if !loading}
-	<h1>{found?.name}</h1>
-{/if}
+	    <PlanetCard planet={found} />
+    {/if}
     
  
 
