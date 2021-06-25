@@ -2,6 +2,7 @@
     export let image;
     export let name;
     export let content;
+    export let source;
 </script>
 
 <div class="planet-container">
@@ -10,6 +11,10 @@
     </div>
     <h1>{name}</h1>
     <p>{content}</p>
+    <span>
+        Source : 
+        <a href={source} target="blank">Wikapedia</a>
+    </span>
 </div>
 <style>
     .image-container {
