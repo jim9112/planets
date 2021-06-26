@@ -27,7 +27,7 @@
         text-align: center;
         padding: 24px;
     }
-    @media (max-width: 812px) {
+    @media (max-width: 500px) {
         img {
             width: 200px;
             margin: auto;

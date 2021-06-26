@@ -40,8 +40,10 @@
             }}>NEPTUNE</li>
     </ul>
 </div>
+<!-- actual header -->
 <div class="container">
     <h1>The Planets</h1>
+    <!-- regular menu -->
     <ul class="desktop-menu">
         <li class="menu-item" on:click={findPlanet("Mercury")}>MERCURY</li>
         <li class="menu-item" on:click={findPlanet("Venus")}>VENUS</li>

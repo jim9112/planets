@@ -16,30 +16,48 @@
         <h4>
             ROTATION TIME
         </h4>
-        {planet.rotation}
+        <span>
+            {planet.rotation}
+        </span>
     </div>
     <div class="stat">
         <h4>
             REVOLUTION TIME
         </h4>
-        {planet.revolution}
+        <span>
+            {planet.revolution}
+        </span>
     </div>
     <div class="stat">
         <h4>
             RADIUS
         </h4>
-        {planet.radius}
+        <span>
+            {planet.radius}
+        </span>
     </div>
     <div class="stat">
         <h4>
             AVERAGE TEMP.
         </h4>
-        {planet.temperature}
+        <span>
+            {planet.temperature}
+        </span>
     </div>
 </div>
 
 <style>
-    .stat {
-        border: 1px solid #979797;
+    
+    @media (max-width: 500px) {
+        .stat {
+            border: 1px solid #979797;
+            margin: 8px 24px;
+            display: grid;
+            grid-auto-flow: column;
+            padding: 10px 24px;
+        }
+        .stat span {
+            justify-self: end;
+        }
     }
 </style>
