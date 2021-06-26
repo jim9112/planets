@@ -12,28 +12,34 @@
 />
 
 <div>
-    <div>
+    <div class="stat">
         <h4>
             ROTATION TIME
         </h4>
         {planet.rotation}
     </div>
-    <div>
+    <div class="stat">
         <h4>
             REVOLUTION TIME
         </h4>
         {planet.revolution}
     </div>
-    <div>
+    <div class="stat">
         <h4>
             RADIUS
         </h4>
         {planet.radius}
     </div>
-    <div>
+    <div class="stat">
         <h4>
             AVERAGE TEMP.
         </h4>
         {planet.temperature}
     </div>
 </div>
+
+<style>
+    .stat {
+        border: 1px solid #979797;
+    }
+</style>
