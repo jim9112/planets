@@ -11,7 +11,7 @@
     source={planet.overview.source} 
 />
 
-<div>
+<div class="stat-container">
     <div class="stat">
         <h4>
             ROTATION TIME
@@ -47,12 +47,24 @@
 </div>
 
 <style>
-    
-    @media (max-width: 500px) {
-        .stat {
+    .stat-container {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        gap: 30px;
+    }
+    .stat {
             border: 1px solid #979797;
-            margin: 8px 24px;
             display: grid;
+            grid-auto-flow: row;
+            width: 255px;
+    }
+    @media (max-width: 500px) {
+        .stat-container {
+            grid-auto-flow: row;
+        }
+        .stat {
+            margin: 8px 24px;
             grid-auto-flow: column;
             padding: 10px 24px;
         }
