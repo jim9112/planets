@@ -27,6 +27,17 @@
     </div>
 </div>
 <style>
+    h1 {
+        font-size: 80px;
+        margin-bottom: 23px;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    nav {
+        margin-top: 39px;
+    }
     .image-container {
         margin-top: 20px;
         width: 100%;
@@ -39,11 +50,15 @@
         display: grid;
         grid-auto-flow: column;
         justify-content: center;
+        align-items: center;
         gap: 220px;
     }
     .description-container {
         max-width: 350px;
         text-align: left;
+    }
+    nav li {
+        cursor: pointer;
     }
     @media (max-width: 500px) {
         img {
