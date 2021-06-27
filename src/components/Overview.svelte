@@ -3,6 +3,7 @@
     export let name;
     export let content;
     export let source;
+    export let changeMode;
 </script>
 
 <div class="planet-container">
@@ -18,9 +19,9 @@
         </span>
         <nav>
             <ul>
-                <li>OVERVIEW</li>
-                <li>INTERNAL STRUCTURE</li>
-                <li>SURFACE GEOLOGY</li>
+                <li on:click={changeMode('overview')}>OVERVIEW</li>
+                <li on:click={changeMode('internal')}>INTERNAL STRUCTURE</li>
+                <li on:click={changeMode('geology')}>SURFACE GEOLOGY</li>
             </ul>
         </nav>
     </div>

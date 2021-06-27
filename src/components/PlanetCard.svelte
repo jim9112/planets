@@ -1,15 +1,38 @@
 <script lang="ts">
     import Overview from '../components/Overview.svelte' 
     export let planet
+    let mode = 'overview'
+
+    const changeMode = (newMode) => {
+        mode = newMode
+    }
 </script>
 
-
-<Overview 
-    image={planet.images.planet} 
-    name={planet.name} 
-    content={planet.overview.content} 
-    source={planet.overview.source} 
-/>
+{#if mode === 'overview'}
+    <Overview 
+        image={planet.images.planet} 
+        name={planet.name} 
+        content={planet.overview.content} 
+        source={planet.overview.source}
+        changeMode={changeMode} 
+    /> 
+    {:else if mode === 'internal'}  
+    <Overview 
+        image={planet.images.internal} 
+        name={planet.name} 
+        content={planet.structure.content} 
+        source={planet.structure.source}
+        changeMode={changeMode}  
+    /> 
+    {:else if mode === 'geology'}  
+    <Overview 
+        image={planet.images.geology} 
+        name={planet.name} 
+        content={planet.geology.content} 
+        source={planet.geology.source}
+        changeMode={changeMode} 
+    /> 
+{/if}
 
 <div class="stat-container">
     <div class="stat">
