@@ -14,26 +14,45 @@
         <h1>{name}</h1>
         <p>{content}</p>
         <span>
-            Source : 
+             Source : 
             <a href={source} target="blank">Wikapedia</a>
         </span>
         <nav>
             <ul>
-                <li on:click={changeMode('overview')}>OVERVIEW</li>
-                <li on:click={changeMode('internal')}>INTERNAL STRUCTURE</li>
-                <li on:click={changeMode('geology')}>SURFACE GEOLOGY</li>
+                <li on:click={changeMode('overview')}>01 OVERVIEW</li>
+                <li on:click={changeMode('internal')}>02 INTERNAL STRUCTURE</li>
+                <li on:click={changeMode('geology')}>03 SURFACE GEOLOGY</li>
             </ul>
         </nav>
     </div>
 </div>
+
 <style>
     h1 {
+        font-family: 'Antonio', sans-serif;
+        font-weight: 500;
         font-size: 80px;
         margin-bottom: 23px;
     }
     p {
+        font-family: 'Spartan', sans-serif ;
         font-size: 14px;
         margin-bottom: 24px;
+    }
+    span {
+        font-family: 'Spartan', sans-serif ;
+    }
+    ul {
+        list-style: none;
+        padding: 0px;
+    }
+    li {
+        font-family: 'Spartan', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        border: 1px solid #979797;
+        margin-bottom: 16px;
+        padding: 12px 28px;
     }
     nav {
         margin-top: 39px;

@@ -62,7 +62,15 @@
         display: inline;
         margin-left: 33px;
     }
+    .container h1 {
+        font-family: 'Antonio', sans-serif;
+        font-weight: 500;
+        font-size: 28px;
+    }
     .desktop-menu {
+        font-family: 'Spartan', sans-serif;
+        font-weight: bold;
+        font-size: 11px;
         justify-self: end;
         list-style: none;
         display: flex;

@@ -70,6 +70,17 @@
 </div>
 
 <style>
+    h4 {
+        font-family: 'Spartan', sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+    }
+    span {
+        font-family: 'Antonio', sans-serif;
+        font-weight: 500;
+        font-size: 40px;
+
+    }
     .stat-container {
         display: grid;
         grid-auto-flow: column;
@@ -81,6 +92,7 @@
             display: grid;
             grid-auto-flow: row;
             width: 255px;
+            padding: 23px;
     }
     @media (max-width: 500px) {
         .stat-container {
