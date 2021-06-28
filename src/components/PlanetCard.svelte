@@ -83,7 +83,8 @@
     }
     .stat-container {
         display: grid;
-        grid-auto-flow: column;
+        padding: 56px 40px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         justify-content: center;
         gap: 30px;
     }
@@ -91,7 +92,6 @@
             border: 1px solid #979797;
             display: grid;
             grid-auto-flow: row;
-            width: 255px;
             padding: 23px;
     }
     @media (max-width: 500px) {
