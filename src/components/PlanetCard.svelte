@@ -1,9 +1,32 @@
 <script lang="ts">
     import Overview from '../components/Overview.svelte' 
-    export let planet
+    export let planet: {
+        name: string,
+        rotation: string,
+        revolution: string,
+        radius: string,
+        temperature: string,
+        images: {
+            planet: string,
+            internal: string,
+            geology: string
+        },
+        overview: {
+            content: string,
+            source: string,
+        },
+        structure: {
+            content: string,
+            source: string,
+        },
+        geology: {
+            content: string,
+            source: string,
+        }
+    }
     let mode = 'overview'
 
-    const changeMode = (newMode) => {
+    const changeMode = (newMode: string): any => {
         mode = newMode
     }
 </script>

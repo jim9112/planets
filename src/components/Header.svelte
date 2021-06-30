@@ -1,6 +1,6 @@
 <script lang="ts">
     export let findPlanet: any
-    let mobileMenu
+    let mobileMenu: any
 </script>
 
 <!-- mobile menu -->

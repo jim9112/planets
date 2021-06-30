@@ -1,13 +1,11 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-
-    export let image;
-    export let name;
-    export let content;
-    export let source;
-    export let changeMode;
+    export let image: string;
+    export let name: string;
+    export let content: string;
+    export let source: string;
+    export let changeMode: (mode: string)=>{};
     export let mode: 'overview' | 'internal' | 'geology'
-    export let secondImage: string;
+    export let secondImage: string | null;
 
 </script>
 
@@ -22,20 +20,22 @@
         </div>
     </div>
     <div class="description-container">
+        <div>
             <h1>{name}</h1>
             <p>{content}</p>
             <span>
                  Source : 
                 <a href={source} target="blank">Wikapedia</a>
             </span>
+        </div>
 
         <nav>
             <ul>
-                <li class={mode === 'overview' ? name : ''} on:click={changeMode('overview')}>01 OVERVIEW</li>
+                <li class={mode === 'overview' ? name : ''} on:click={() => changeMode('overview')}>01 OVERVIEW</li>
                 <li class={mode === 'internal' ? name : ''} on:click={()=>{              
                     changeMode('internal')
                 }}>02 INTERNAL STRUCTURE</li>
-                <li class={mode === 'geology' ? name : ''} on:click={changeMode('geology')}>03 SURFACE GEOLOGY</li>
+                <li class={mode === 'geology' ? name : ''} on:click={()=>changeMode('geology')}>03 SURFACE GEOLOGY</li>
             </ul>
         </nav>
     </div>
