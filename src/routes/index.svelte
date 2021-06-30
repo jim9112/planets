@@ -9,8 +9,7 @@
     // find chosen planet in JSON file
     const findPlanet = (planetName) => {
         found = data.find(planet => planet.name === planetName)
-        loading = false
-        console.log(found)   
+        loading = false 
     }
 
     // make a default planet pop up

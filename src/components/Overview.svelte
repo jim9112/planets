@@ -1,9 +1,13 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
     export let image;
     export let name;
     export let content;
     export let source;
     export let changeMode;
+    export let mode: 'overview' | 'internal' | 'geology'
+
 </script>
 
 <div class="planet-container">
@@ -11,17 +15,20 @@
         <img src={image} alt="">
     </div>
     <div class="description-container">
-        <h1>{name}</h1>
-        <p>{content}</p>
-        <span>
-             Source : 
-            <a href={source} target="blank">Wikapedia</a>
-        </span>
+            <h1>{name}</h1>
+            <p>{content}</p>
+            <span>
+                 Source : 
+                <a href={source} target="blank">Wikapedia</a>
+            </span>
+
         <nav>
             <ul>
-                <li on:click={changeMode('overview')}>01 OVERVIEW</li>
-                <li on:click={changeMode('internal')}>02 INTERNAL STRUCTURE</li>
-                <li on:click={changeMode('geology')}>03 SURFACE GEOLOGY</li>
+                <li class={mode === 'overview' ? name : ''} on:click={changeMode('overview')}>01 OVERVIEW</li>
+                <li class={mode === 'internal' ? name : ''} on:click={()=>{              
+                    changeMode('internal')
+                }}>02 INTERNAL STRUCTURE</li>
+                <li class={mode === 'geology' ? name : ''} on:click={changeMode('geology')}>03 SURFACE GEOLOGY</li>
             </ul>
         </nav>
     </div>
@@ -79,6 +86,26 @@
     nav li {
         cursor: pointer;
     }
+
+/* planet specific styling for nav */
+    .Mercury {
+        background-color: #419EBB;
+        border: none;
+        cursor: default;
+    }
+
+    .Venus {
+        background-color: #EDA249;
+        border: none;
+        cursor: default;
+    }
+
+    .Earth {
+        background-color: #6D2ED5;
+        border: none;
+        cursor: default;
+    }
+
     @media (max-width: 500px) {
         img {
             width: 200px;

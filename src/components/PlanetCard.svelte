@@ -8,8 +8,10 @@
     }
 </script>
 
+<!-- Change overview display based on the selected mode -->
 {#if mode === 'overview'}
     <Overview 
+        mode={mode}
         image={planet.images.planet} 
         name={planet.name} 
         content={planet.overview.content} 
@@ -18,6 +20,7 @@
     /> 
     {:else if mode === 'internal'}  
     <Overview 
+        mode={mode}
         image={planet.images.internal} 
         name={planet.name} 
         content={planet.structure.content} 
@@ -26,6 +29,7 @@
     /> 
     {:else if mode === 'geology'}  
     <Overview 
+        mode={mode}
         image={planet.images.geology} 
         name={planet.name} 
         content={planet.geology.content} 
