@@ -106,6 +106,36 @@
         cursor: default;
     }
 
+    .Mars {
+        background-color: #D14C32;
+        border: none;
+        cursor: default;
+    }
+
+    .Jupiter {
+        background-color: #D83A34;
+        border: none;
+        cursor: default;
+    }
+
+    .Saturn {
+        background-color: #CD5120;
+        border: none;
+        cursor: default;
+    }
+
+    .Uranus {
+        background-color: #1EC1A2;
+        border: none;
+        cursor: default;
+    }
+
+    .Neptune {
+        background-color: #2D68F0;
+        border: none;
+        cursor: default;
+    }
+
     @media (max-width: 500px) {
         img {
             width: 200px;
