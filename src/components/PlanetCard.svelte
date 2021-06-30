@@ -12,7 +12,8 @@
 {#if mode === 'overview'}
     <Overview 
         mode={mode}
-        image={planet.images.planet} 
+        image={planet.images.planet}
+        secondImage={null} 
         name={planet.name} 
         content={planet.overview.content} 
         source={planet.overview.source}
@@ -21,7 +22,8 @@
     {:else if mode === 'internal'}  
     <Overview 
         mode={mode}
-        image={planet.images.internal} 
+        image={planet.images.internal}
+        secondImage={null} 
         name={planet.name} 
         content={planet.structure.content} 
         source={planet.structure.source}
@@ -30,7 +32,8 @@
     {:else if mode === 'geology'}  
     <Overview 
         mode={mode}
-        image={planet.images.geology} 
+        image={planet.images.planet}
+        secondImage={planet.images.geology} 
         name={planet.name} 
         content={planet.geology.content} 
         source={planet.geology.source}

@@ -7,12 +7,19 @@
     export let source;
     export let changeMode;
     export let mode: 'overview' | 'internal' | 'geology'
+    export let secondImage: string;
 
 </script>
 
 <div class="planet-container">
     <div class="image-container">
-        <img src={image} alt="">
+        <div class="relative">
+
+            <img src={image} alt="">
+            {#if secondImage !== null}
+                <img class="second-image-container" src={secondImage} alt="">
+            {/if}
+        </div>
     </div>
     <div class="description-container">
             <h1>{name}</h1>
@@ -70,6 +77,12 @@
         display: grid;
         justify-content: center;
     }
+    .second-image-container {
+        position: absolute;
+        width: 168px;
+        left: 25%;
+        top: 50%;
+    }
     .planet-container {
         text-align: center;
         padding: 24px;
@@ -78,6 +91,9 @@
         justify-content: center;
         align-items: center;
         gap: 220px;
+    }
+    .relative {
+        position: relative;
     }
     .description-container {
         max-width: 350px;
