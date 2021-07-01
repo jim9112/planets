@@ -1,7 +1,7 @@
 <script lang="ts">
     export let findPlanet: any
     let mobileMenu: any
-    
+
     // handle mobil menu clicks
     const menuClick = (planet: string) => {
         findPlanet(planet);
@@ -117,7 +117,7 @@
         }
     }
 
-    /* conputer */
+    /* computer */
     @media (min-width: 801px) {
         .container {
             grid-auto-flow: column;

@@ -150,6 +150,9 @@
         cursor: default;
     }
 
+     /* responsive breakpoints */
+
+    /* phone */
     @media (max-width: 500px) {
         img {
             width: 200px;
@@ -160,5 +163,16 @@
             gap: 0px;
 
         }
+    }
+    
+
+    /* tablet */
+    @media (min-width: 651px) {
+        
+    }
+
+    /* computer */
+    @media (min-width: 801px) {
+        
     }
 </style>
