@@ -85,10 +85,9 @@
         text-align: center;
         padding: 24px;
         display: grid;
-        grid-auto-flow: column;
         justify-content: center;
         align-items: center;
-        gap: 220px;
+
     }
     .relative {
         position: relative;
@@ -168,11 +167,29 @@
 
     /* tablet */
     @media (min-width: 651px) {
-        
+        .planet-container {
+            grid-auto-flow: row;
+            gap: 100px;
+        }
+        .description-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            max-width: 100%;
+            gap: 60px;
+        }
     }
 
     /* computer */
     @media (min-width: 801px) {
-        
+        .planet-container {
+            grid-auto-flow: column;
+            gap: 220px;
+        }
+        .description-container {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            max-width: 350px;
+            gap: 60px;
+        }
     }
 </style>
