@@ -32,9 +32,7 @@
         <nav>
             <ul>
                 <li class={mode === 'overview' ? name : ''} on:click={() => changeMode('overview')}>01 OVERVIEW</li>
-                <li class={mode === 'internal' ? name : ''} on:click={()=>{              
-                    changeMode('internal')
-                }}>02 INTERNAL STRUCTURE</li>
+                <li class={mode === 'internal' ? name : ''} on:click={()=> changeMode('internal')}>02 INTERNAL STRUCTURE</li>
                 <li class={mode === 'geology' ? name : ''} on:click={()=>changeMode('geology')}>03 SURFACE GEOLOGY</li>
             </ul>
         </nav>
@@ -159,6 +157,8 @@
         }
         .planet-container {
             grid-auto-flow: row;
+            gap: 0px;
+
         }
     }
 </style>
