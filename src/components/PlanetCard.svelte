@@ -26,9 +26,8 @@
     }
     let mode = 'overview'
 
-    const changeMode = (newMode: string): any => {
-        mode = newMode
-    }
+    const changeMode = (newMode: string): string => mode = newMode
+    
 </script>
 
 <!-- Change overview display based on the selected mode -->
