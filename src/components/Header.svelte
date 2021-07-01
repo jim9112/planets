@@ -1,45 +1,28 @@
 <script lang="ts">
     export let findPlanet: any
     let mobileMenu: any
+    
+    // handle mobil menu clicks
+    const menuClick = (planet: string) => {
+        findPlanet(planet);
+        mobileMenu.classList.add('hidden')
+    }
 </script>
 
 <!-- mobile menu -->
 <div bind:this={mobileMenu} class="mobile-menu hidden">
     <ul>
-        <li on:click={()=> {
-            findPlanet("Mercury");
-            mobileMenu.classList.add('hidden')
-            }}>MERCURY</li>
-        <li on:click={()=> {
-            findPlanet("Venus");
-            mobileMenu.classList.add('hidden')
-            }}>VENUS</li>
-        <li on:click={()=> {
-            findPlanet("Earth");
-            mobileMenu.classList.add('hidden')
-            }}>EARTH</li>
-        <li on:click={()=> {
-            findPlanet("Mars");
-            mobileMenu.classList.add('hidden')
-            }}>MARS</li>
-        <li on:click={()=> {
-            findPlanet("Jupiter");
-            mobileMenu.classList.add('hidden')
-            }}>JUPITER</li>
-        <li on:click={()=> {
-            findPlanet("Saturn");
-            mobileMenu.classList.add('hidden')
-            }}>SATURN</li>
-        <li on:click={()=> {
-            findPlanet("Uranus");
-            mobileMenu.classList.add('hidden')
-            }}>URANUS</li>
-        <li on:click={()=> {
-            findPlanet("Neptune");
-            mobileMenu.classList.add('hidden')
-            }}>NEPTUNE</li>
+        <li on:click={()=> menuClick('Mercury')}>MERCURY</li>
+        <li on:click={()=> menuClick('Venus')}>VENUS</li>
+        <li on:click={()=> menuClick('Earth')}>EARTH</li>
+        <li on:click={()=> menuClick('Mars')}>MARS</li>
+        <li on:click={()=> menuClick('Jupiter')}>JUPITER</li>
+        <li on:click={()=> menuClick('Saturn')}>SATURN</li>
+        <li on:click={()=> menuClick('Uranus')}>URANUS</li>
+        <li on:click={()=> menuClick('Neptune')}>NEPTUNE</li>
     </ul>
 </div>
+
 <!-- actual header -->
 <div class="container">
     <h1>The Planets</h1>
@@ -58,14 +41,19 @@
 </div>
 
 <style>
-    h1 {
-        display: inline;
-        margin-left: 33px;
+    .container {
+        display: grid;
+        align-items: center;
+        width: 100%;
+        border-bottom: 1px solid #979797;
+        padding: 16px 0px;
     }
     .container h1 {
         font-family: 'Antonio', sans-serif;
         font-weight: 500;
         font-size: 28px;
+        display: inline;
+        margin-left: 33px;
     }
     .desktop-menu {
         font-family: 'Spartan', sans-serif;
@@ -79,7 +67,6 @@
     .menu-item {
         cursor: pointer;
         margin-right: 33px;
-
     }
     .mobile-menu {
         position: absolute;
@@ -95,14 +82,6 @@
     .mobile-menu li {
         cursor: pointer;
     }
-    .container {
-        display: grid;
-        align-items: center;
-        grid-auto-flow: column;
-        width: 100%;
-        border-bottom: 1px solid #979797;
-        padding: 16px 0px;
-    }
     .hamburger-icon {
         justify-self: end;
         margin-right: 33px;
@@ -112,12 +91,39 @@
     .hidden {
         display: none;
     }
-    @media (max-width: 812px) {
+
+    /* responsive breakpoints */
+
+    /* phone */
+    @media (max-width: 650px) {
+        .container {
+            grid-auto-flow: column;
+        }
         .desktop-menu {
             display: none;
         }
         .hamburger-icon {
             display: inline;
+        }
+    }
+
+    /* tablet */
+    @media (min-width: 651px) {
+        .container {
+            grid-auto-flow: row;
+            justify-content: center;
+            text-align: center;
+            gap: 39px;
+        }
+    }
+
+    /* conputer */
+    @media (min-width: 801px) {
+        .container {
+            grid-auto-flow: column;
+            text-align: left;
+            justify-content: normal;
+            gap: 0px;
         }
     }
 </style>
