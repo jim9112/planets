@@ -12,8 +12,8 @@
 <div class="planet-container">
     <div class="image-container">
         <div class="relative">
-
-            <img src={image} alt="">
+            <!-- to do: make planet its own component -->
+            <img class={`${name}-image`} src={image} alt="">
             {#if secondImage !== null}
                 <img class="second-image-container" src={secondImage} alt="">
             {/if}
@@ -43,12 +43,10 @@
     h1 {
         font-family: 'Antonio', sans-serif;
         font-weight: 500;
-        font-size: 80px;
         margin-bottom: 23px;
     }
     p {
         font-family: 'Spartan', sans-serif ;
-        font-size: 14px;
         margin-bottom: 24px;
     }
     span {
@@ -61,7 +59,6 @@
     li {
         font-family: 'Spartan', sans-serif;
         font-weight: bold;
-        font-size: 12px;
         border: 1px solid #979797;
         margin-bottom: 16px;
         padding: 12px 28px;
@@ -100,12 +97,13 @@
         cursor: pointer;
     }
 
-/* planet specific styling for nav */
+/* planet specific styling */
     .Mercury {
         background-color: #419EBB;
         border: none;
         cursor: default;
     }
+    
 
     .Venus {
         background-color: #EDA249;
@@ -167,6 +165,15 @@
 
     /* tablet */
     @media (min-width: 651px) {
+        h1 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 11px;
+        }
+        li {
+            font-size: 9px;
+        }
         .planet-container {
             grid-auto-flow: row;
             gap: 100px;
@@ -176,11 +183,48 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
             max-width: 100%;
             gap: 60px;
+            align-items: center;
+        }
+
+        /* planet sizing */
+
+        .Mercury-image {
+            width: 180px;
+        }
+        .Venus-image {
+            width: 253px;
+        }
+        .Earth-image {
+            width: 285px;
+        }
+        .Mars-image {
+            width: 213px;
+        }
+        .Jupiter-image {
+            width: 369px;
+        }
+        .Saturn-image {
+            width: 422px;
+        }
+        .Uranus-image {
+            width: 290px;
+        }
+        .Neptune-image {
+            width: 285px;
         }
     }
 
     /* computer */
     @media (min-width: 801px) {
+        h1 {
+            font-size: 80px;
+        }
+        p {
+            font-size: 14px;
+        }
+        li {
+            font-size: 12px;
+        }
         .planet-container {
             grid-auto-flow: column;
             gap: 220px;
@@ -189,7 +233,34 @@
             display: grid;
             grid-template-columns: repeat(1, minmax(0, 1fr));
             max-width: 350px;
-            gap: 60px;
+            gap: 39px;
+        }
+
+        /* planet sizing */
+
+        .Mercury-image {
+            width: 100%;
+        }
+        .Venus-image {
+            width: 100%;
+        }
+        .Earth-image {
+            width: 100%;
+        }
+        .Mars-image {
+            width: 100%;
+        }
+        .Jupiter-image {
+            width: 100%;
+        }
+        .Saturn-image {
+            width: 100%;
+        }
+        .Uranus-image {
+            width: 100%;
+        }
+        .Neptune-image {
+            width: 100%;
         }
     }
 </style>
