@@ -1,5 +1,6 @@
 <script lang="ts">
     import PlanetImage from './PlanetImage.svelte';
+    import ModeNav from './ModeNav.svelte'
     export let image: string;
     export let name: string;
     export let content: string;
@@ -23,13 +24,7 @@
             </span>
         </div>
 
-        <nav>
-            <ul>
-                <li class={mode === 'overview' ? name : ''} on:click={() => changeMode('overview')}>01 OVERVIEW</li>
-                <li class={mode === 'internal' ? name : ''} on:click={()=> changeMode('internal')}>02 INTERNAL STRUCTURE</li>
-                <li class={mode === 'geology' ? name : ''} on:click={()=>changeMode('geology')}>03 SURFACE GEOLOGY</li>
-            </ul>
-        </nav>
+        <ModeNav name={name} changeMode={changeMode} mode={mode}/>
     </div>
 </div>
 
@@ -46,20 +41,7 @@
     span {
         font-family: 'Spartan', sans-serif ;
     }
-    ul {
-        list-style: none;
-        padding: 0px;
-    }
-    li {
-        font-family: 'Spartan', sans-serif;
-        font-weight: bold;
-        border: 1px solid #979797;
-        margin-bottom: 16px;
-        padding: 12px 28px;
-    }
-    nav {
-        margin-top: 39px;
-    }
+     
     .image-container {
         margin-top: 20px;
         width: 100%;
@@ -75,66 +57,11 @@
         align-items: center;
 
     }
-    .relative {
-        position: relative;
-    }
     .description-container {
         max-width: 350px;
         text-align: left;
     }
-    nav li {
-        cursor: pointer;
-    }
 
-/* planet specific styling */
-    .Mercury {
-        background-color: #419EBB;
-        border: none;
-        cursor: default;
-    }
-    
-
-    .Venus {
-        background-color: #EDA249;
-        border: none;
-        cursor: default;
-    }
-
-    .Earth {
-        background-color: #6D2ED5;
-        border: none;
-        cursor: default;
-    }
-
-    .Mars {
-        background-color: #D14C32;
-        border: none;
-        cursor: default;
-    }
-
-    .Jupiter {
-        background-color: #D83A34;
-        border: none;
-        cursor: default;
-    }
-
-    .Saturn {
-        background-color: #CD5120;
-        border: none;
-        cursor: default;
-    }
-
-    .Uranus {
-        background-color: #1EC1A2;
-        border: none;
-        cursor: default;
-    }
-
-    .Neptune {
-        background-color: #2D68F0;
-        border: none;
-        cursor: default;
-    }
 
      /* responsive breakpoints */
 
