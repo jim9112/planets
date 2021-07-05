@@ -1,16 +1,16 @@
 <script lang="ts">
-  export let mode: 'overview' | 'internal' | 'geology'
-  export let name: string
+  export let mode: 'overview' | 'internal' | 'geology';
+  export let name: string;
   export let changeMode: (mode: string)=>{};
-  let passedClass: string
-  export {passedClass as class}
+  let passedClass: 'desktop-menu' | 'mobile-menu';
+  export {passedClass as class};
 </script>
 
 <nav class={`nav-container ${passedClass || ''}`}>
   <ul>
-      <li class={mode === 'overview' ? name : ''} on:click={() => changeMode('overview')}>01 OVERVIEW</li>
-      <li class={mode === 'internal' ? name : ''} on:click={()=> changeMode('internal')}>02 INTERNAL STRUCTURE</li>
-      <li class={mode === 'geology' ? name : ''} on:click={()=>changeMode('geology')}>03 SURFACE GEOLOGY</li>
+      <li class={mode === 'overview' ? name : ''} on:click={() => changeMode('overview')}><span class="desktop-display">01 </span>OVERVIEW</li>
+      <li class={mode === 'internal' ? name : ''} on:click={()=> changeMode('internal')}><span class="desktop-display">02 INTERNAL</span> STRUCTURE</li>
+      <li class={mode === 'geology' ? name : ''} on:click={()=>changeMode('geology')}><span class="desktop-display">03 SURFACE</span> GEOLOGY</li>
   </ul>
 </nav>
 
@@ -19,66 +19,74 @@
   nav {
         margin-top: 39px;
     }
-    ul {
-        list-style: none;
+    ul {    
         padding: 0px;
+        list-style: none;
     }
     li {
         font-family: 'Spartan', sans-serif;
         font-weight: bold;
-        border: 1px solid #979797;
-        margin-bottom: 16px;
-        padding: 12px 28px;
-    }
-    nav li {
         cursor: pointer;
+    }
+    .desktop-menu li {
+      border: 1px solid #979797;
+      margin-bottom: 16px;
+      padding: 12px 28px;
+    }
+    .mobile-menu ul {
+      display: grid;
+      grid-auto-flow: column;
+      
+    }
+    .mobile-menu .desktop-display {
+      display: none;
     }
 
 /* planet specific styling */
-    .Mercury {
+    .desktop-menu .Mercury {
         background-color: #419EBB;
         border: none;
         cursor: default;
     }
     
 
-    .Venus {
+    .desktop-menu .Venus {
         background-color: #EDA249;
         border: none;
         cursor: default;
     }
 
-    .Earth {
+    .desktop-menu .Earth {
         background-color: #6D2ED5;
         border: none;
         cursor: default;
     }
 
-    .Mars {
+    .desktop-menu .Mars {
         background-color: #D14C32;
         border: none;
         cursor: default;
     }
 
-    .Jupiter {
+    .desktop-menu .Jupiter {
         background-color: #D83A34;
         border: none;
         cursor: default;
     }
 
-    .Saturn {
+    .desktop-menu .Saturn {
         background-color: #CD5120;
         border: none;
         cursor: default;
     }
 
-    .Uranus {
+    .desktop-menu .Uranus {
         background-color: #1EC1A2;
         border: none;
         cursor: default;
     }
 
-    .Neptune {
+    .desktop-menu .Neptune {
         background-color: #2D68F0;
         border: none;
         cursor: default;
