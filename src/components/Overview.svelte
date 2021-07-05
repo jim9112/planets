@@ -102,7 +102,7 @@
 		.planet-container {
 			grid-auto-flow: row;
 			gap: 100px;
-			padding: 24px 0px;
+			padding: 24px 39px;
 		}
 		.description-container {
 			display: grid;
