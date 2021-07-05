@@ -40,7 +40,8 @@
 	}
 	.mobile-menu ul {
 		display: grid;
-		grid-auto-flow: column;
+		grid-template-columns: 80px 80px 80px;
+		justify-content: space-around;
 	}
 	.mobile-menu li {
 		font-size: 9px;
@@ -55,11 +56,17 @@
 		border: none;
 		cursor: default;
 	}
+	.mobile-menu .Mercury {
+		border-bottom: #419ebb 3px solid;
+	}
 
 	.desktop-menu .Venus {
 		background-color: #eda249;
 		border: none;
 		cursor: default;
+	}
+	.mobile-menu .Venus {
+		border-bottom: #eda249 3px solid;
 	}
 
 	.desktop-menu .Earth {
@@ -67,11 +74,17 @@
 		border: none;
 		cursor: default;
 	}
+	.mobile-menu .Earth {
+		border-bottom: #6d2ed5 3px solid;
+	}
 
 	.desktop-menu .Mars {
 		background-color: #d14c32;
 		border: none;
 		cursor: default;
+	}
+	.mobile-menu .Mars {
+		border-bottom: #d14c32 3px solid;
 	}
 
 	.desktop-menu .Jupiter {
@@ -79,11 +92,17 @@
 		border: none;
 		cursor: default;
 	}
+	.mobile-menu .Jupiter {
+		border-bottom: #d83a34 3px solid;
+	}
 
 	.desktop-menu .Saturn {
 		background-color: #cd5120;
 		border: none;
 		cursor: default;
+	}
+	.mobile-menu .Saturn {
+		border-bottom: #cd5120 3px solid;
 	}
 
 	.desktop-menu .Uranus {
@@ -91,11 +110,17 @@
 		border: none;
 		cursor: default;
 	}
+	.mobile-menu .Uranus {
+		border-bottom: #1ec1a2 3px solid;
+	}
 
 	.desktop-menu .Neptune {
 		background-color: #2d68f0;
 		border: none;
 		cursor: default;
+	}
+	.mobile-menu .Neptune {
+		border-bottom: #2d68f0 3px solid;
 	}
 	/* responsive breakpoints */
 
@@ -104,7 +129,13 @@
 		nav {
 			margin-top: 0px;
 			border-bottom: 1px solid #979797;
-			padding: 20px 0px;
+		}
+		ul {
+			height: 50px;
+		}
+		li {
+			display: grid;
+			place-items: center;
 		}
 		.desktop-menu {
 			display: none;

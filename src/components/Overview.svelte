@@ -68,6 +68,13 @@
 
 	/* phone */
 	@media (max-width: 500px) {
+		h1 {
+			font-size: 40px;
+		}
+		p {
+			font-size: 11px;
+			line-height: 22px;
+		}
 		.planet-container {
 			grid-auto-flow: row;
 			gap: 0px;
@@ -90,6 +97,7 @@
 		}
 		p {
 			font-size: 11px;
+			line-height: 22px;
 		}
 		.planet-container {
 			grid-auto-flow: row;
@@ -112,6 +120,7 @@
 		}
 		p {
 			font-size: 14px;
+			line-height: 25px;
 		}
 		.planet-container {
 			grid-auto-flow: column;
