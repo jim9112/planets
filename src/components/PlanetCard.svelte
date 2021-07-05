@@ -125,6 +125,13 @@
 			margin: 0px;
 			grid-auto-flow: column;
 			padding: 10px 24px;
+			align-items: center;
+		}
+		h4 {
+			font-size: 8px;
+		}
+		span {
+			font-size: 20px;
 		}
 		.stat span {
 			justify-self: end;
