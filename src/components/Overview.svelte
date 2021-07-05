@@ -145,6 +145,9 @@
             gap: 0px;
 
         }
+        .image-container {
+            margin-bottom: 98px;
+        }
     }
     
 

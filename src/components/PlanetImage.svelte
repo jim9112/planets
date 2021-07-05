@@ -9,7 +9,7 @@
   <!-- to do: make planet its own component -->
   <img class={`${name}-image`} src={image} alt="">
   {#if secondImage !== null}
-      <img class="second-image-container" src={secondImage} alt="">
+      <img class="second-image" src={secondImage} alt="">
   {/if}
 </div>
 
@@ -18,7 +18,7 @@
         position: relative;
     }
 
-    .second-image-container {
+    .second-image {
         position: absolute;
         width: 168px;
         left: 25%;
@@ -29,8 +29,37 @@
     /* phone */
     @media (max-width: 500px) {
         img {
-            width: 200px;
             margin: auto;
+        }
+        .second-image {
+            left: 10%;
+            width: 120px;
+        }
+         /* planet sizing */
+
+        .Mercury-image {
+            width: 111px;
+        }
+        .Venus-image {
+            width: 154px;
+        }
+        .Earth-image {
+            width: 173px;
+        }
+        .Mars-image {
+            width: 129px;
+        }
+        .Jupiter-image {
+            width: 224px;
+        }
+        .Saturn-image {
+            width: 256px;
+        }
+        .Uranus-image {
+            width: 176px;
+        }
+        .Neptune-image {
+            width: 173px;
         }
     }
     
