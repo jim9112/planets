@@ -11,6 +11,8 @@
 </script>
 
 <div class="planet-container">
+    <!-- Menu for mobile -->
+    <ModeNav class="mobile-menu" name={name} changeMode={changeMode} mode={mode}/>
     <div class="image-container">
         <PlanetImage name={name} image={image} secondImage={secondImage} />
     </div>
@@ -24,7 +26,8 @@
             </span>
         </div>
 
-        <ModeNav name={name} changeMode={changeMode} mode={mode}/>
+        <!-- Menu for tablet and desktop -->
+        <ModeNav class="desktop-menu" name={name} changeMode={changeMode} mode={mode}/>
     </div>
 </div>
 
@@ -86,9 +89,6 @@
         p {
             font-size: 11px;
         }
-        li {
-            font-size: 9px;
-        }
         .planet-container {
             grid-auto-flow: row;
             gap: 100px;
@@ -109,9 +109,6 @@
         }
         p {
             font-size: 14px;
-        }
-        li {
-            font-size: 12px;
         }
         .planet-container {
             grid-auto-flow: column;

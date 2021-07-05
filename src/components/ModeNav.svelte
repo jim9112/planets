@@ -2,9 +2,11 @@
   export let mode: 'overview' | 'internal' | 'geology'
   export let name: string
   export let changeMode: (mode: string)=>{};
+  let passedClass: string
+  export {passedClass as class}
 </script>
 
-<nav class="nav-container">
+<nav class={`nav-container ${passedClass || ''}`}>
   <ul>
       <li class={mode === 'overview' ? name : ''} on:click={() => changeMode('overview')}>01 OVERVIEW</li>
       <li class={mode === 'internal' ? name : ''} on:click={()=> changeMode('internal')}>02 INTERNAL STRUCTURE</li>
@@ -85,13 +87,8 @@
 
     /* phone */
     @media (max-width: 500px) {
-        .planet-container {
-            grid-auto-flow: row;
-            gap: 0px;
-
-        }
-        .image-container {
-            margin-bottom: 98px;
+        .desktop-menu {
+          display: none;
         }
     }
     
@@ -101,7 +98,9 @@
         li {
             font-size: 9px;
         }
-
+        .mobile-menu {
+          display: none;
+        }
     }
 
     /* computer */
