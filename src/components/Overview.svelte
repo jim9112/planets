@@ -82,7 +82,7 @@
 			justify-content: normal;
 		}
 		.image-container {
-			margin-bottom: 85px;
+			margin-bottom: 70px;
 		}
 		.description-container {
 			text-align: center;

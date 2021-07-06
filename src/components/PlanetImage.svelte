@@ -31,7 +31,7 @@
 			margin: auto;
 		}
 		.second-image {
-			top: 20%;
+			top: 30%;
 			left: 10%;
 			width: 120px;
 		}
