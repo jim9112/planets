@@ -12,14 +12,30 @@
 <!-- mobile menu -->
 <div bind:this={mobileMenu} class="mobile-menu hidden">
 	<ul>
-		<li on:click={() => menuClick('Mercury')}>MERCURY</li>
-		<li on:click={() => menuClick('Venus')}>VENUS</li>
-		<li on:click={() => menuClick('Earth')}>EARTH</li>
-		<li on:click={() => menuClick('Mars')}>MARS</li>
-		<li on:click={() => menuClick('Jupiter')}>JUPITER</li>
-		<li on:click={() => menuClick('Saturn')}>SATURN</li>
-		<li on:click={() => menuClick('Uranus')}>URANUS</li>
-		<li on:click={() => menuClick('Neptune')}>NEPTUNE</li>
+		<li on:click={() => menuClick('Mercury')}>
+			<span class="bullet" style="background-color: #DEF4FC;" />MERCURY
+		</li>
+		<li on:click={() => menuClick('Venus')}>
+			<span class="bullet" style="background-color: #F7CC7F;" />VENUS
+		</li>
+		<li on:click={() => menuClick('Earth')}>
+			<span class="bullet" style="background-color: #545BFE;" />EARTH
+		</li>
+		<li on:click={() => menuClick('Mars')}>
+			<span class="bullet" style="background-color: #FF6A45;" />MARS
+		</li>
+		<li on:click={() => menuClick('Jupiter')}>
+			<span class="bullet" style="background-color: #ECAD7A;" />JUPITER
+		</li>
+		<li on:click={() => menuClick('Saturn')}>
+			<span class="bullet" style="background-color: #FCCB6B;" />SATURN
+		</li>
+		<li on:click={() => menuClick('Uranus')}>
+			<span class="bullet" style="background-color: #65F0D5;" />URANUS
+		</li>
+		<li on:click={() => menuClick('Neptune')}>
+			<span class="bullet" style="background-color: #497EFA;" />NEPTUNE
+		</li>
 	</ul>
 </div>
 
@@ -48,6 +64,13 @@
 </div>
 
 <style>
+	.bullet {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		margin-right: 24px;
+	}
 	.container {
 		display: grid;
 		align-items: center;
@@ -97,6 +120,8 @@
 		font-family: 'spartan', sans-serif;
 		font-weight: bold;
 		padding: 20px 0px;
+		display: flex;
+		align-items: center;
 	}
 	.mobile-menu li:last-child {
 		border-bottom: 0;
